@@ -1,6 +1,5 @@
-package net.ghost.backend.entity;
+package net.ghost.backend.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,24 +9,13 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "messages")
-public class Message {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class MessageDto {
     private Long id;
-
-    @Column(name = "content")
     private String content;
-
-    @Column(name = "datetime")
     private String datetime;
-
-    @Column(name = "user")
     private String user;
 
-//    public Message(Long id, String content, String datetime, String user) {
+//    public MessageDto(Long id, String content, String datetime, String user){
 //        this.id = id;
 //        this.content = content;
 //        this.datetime = datetime;
